@@ -108,7 +108,10 @@ class Enigma(object):
                 self.rotors[i].rotate(1)
 
     def getPlugCables(self):
-        return [self.plugCables[0].getCable(), self.plugCables[1].getCable(), self.plugCables[2].getCable()]
+        return [chr(self.plugCables[0].cable[0]+97), chr(self.plugCables[0].cable[1]+97),
+                chr(self.plugCables[1].cable[0]+97), chr(self.plugCables[1].cable[1]+97),
+                chr(self.plugCables[2].cable[0]+97), chr(self.plugCables[2].cable[1]+97)]
+
 
     def getRotorNames(self):
         retArr = ['x'] * len(rotors)
